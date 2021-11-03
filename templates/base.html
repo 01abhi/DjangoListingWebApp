@@ -45,6 +45,13 @@
                 </div>
             </div>
         </div>
+        <form action="{% url 'new_search' %}" method = "post">
+            {% csrf_token%}
+            <input class="input-field" type="text" name="search" placeholder="search">
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+                <i class="material-icons center">search</i>
+            </button>
+        </form>
         {% block content %}
 
         {% endblock content %}        
